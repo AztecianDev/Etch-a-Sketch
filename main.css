@@ -8,6 +8,31 @@ body {
     background-color: #57d7e5;
 }
 
+/* .grid-container {
+    display: grid;
+    margin: auto;
+    background-color: #111;
+    width: 650px;
+    height: 650px;
+    border: 1px solid #111;
+    grid-gap: 1px;
+    margin-top: 20px;
+}
+
+.grid-cells {
+    background-color: #ffffff;
+}
+
+.painted {
+    background-color: black !important;
+} */
+
+.container {
+    display: block;
+    text-align: center;
+    margin: 30px;
+}
+
 h1 {
     margin: 20px;
     text-align: center;
