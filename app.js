@@ -4,6 +4,8 @@ const btnBlack = document.getElementById("black");
 const btnRainbow = document.getElementById("rainbow");
 const gridContainer = document.querySelector("#container");
 
+let newGrid = createGrid(16);
+
 //create grid
 function createGrid(gSize) {
   gridContainer.style.gridTemplateColumns = `repeat(${gSize}, 1fr)`;
@@ -18,8 +20,10 @@ function createGrid(gSize) {
   }
 }
 
-createGrid(16);
-
-btnBlack.addEventListener("click", function() {
-  alert("hello im working");
-});
+function reset() {
+  const userInput = prompt("Create Grid, Chose a Number between 1-100");
+  newGrid = createGrid(userInput);
+  console.log(userInput);
+}
+// event listners
+btnReset.addEventListener("click", reset);
