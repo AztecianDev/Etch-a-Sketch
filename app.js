@@ -9,7 +9,7 @@ let newGrid = createGrid(16);
 //create grid
 function createGrid(gSize) {
   gridContainer.style.gridTemplateColumns = `repeat(${gSize}, 1fr)`;
-  gridContainer.style.gridTemplateRows = `repeat(${gSize}, 1fr)`;
+  gridContainer.style.gridTemplateRows = `repeat(${gSize}, 1fr )`;
 
   for (let i = 0; i < gSize * gSize; i++) {
     gridCells = document.createElement("div");
@@ -21,9 +21,15 @@ function createGrid(gSize) {
 }
 
 function reset() {
+  while (gridContainer.firstChild) {
+    gridContainer.removeChild(gridContainer.firstChild);
+  }
+
   const userInput = prompt("Create Grid, Chose a Number between 1-100");
   newGrid = createGrid(userInput);
-  console.log(userInput);
+
+  return;
 }
+
 // event listners
 btnReset.addEventListener("click", reset);
