@@ -29,8 +29,11 @@ function reset() {
 
   const userInput = prompt("Create Grid, Chose a Number between 1-100");
   newGrid = createGrid(userInput);
-
-  return;
+  if (userInput >= 1 && userInput <= 100) {
+    return;
+  } else {
+    alert("Invalid Choice! Pick a number between 1-100");
+  }
 }
 
 function colourB() {
@@ -41,12 +44,13 @@ function colourB() {
     });
   });
 }
+// create random hex color.
 function random() {
   let hash = "#";
   let colour = Math.floor(Math.random() * 16777215).toString(16);
   return hash + colour;
 }
-console.log(random());
+
 function rainbow() {
   // let colour = Math.floor(Math.random() * 16777215).toString(16);
   let cellR = document.querySelectorAll(".grid-cell");
