@@ -19,6 +19,7 @@ function createGrid(gSize) {
 
     gridContainer.appendChild(gridCells);
   }
+  hover();
 }
 
 //reset grid when user inputs new grid size.
@@ -57,6 +58,15 @@ function rainbow() {
   cellR.forEach(gridCells => {
     gridCells.addEventListener("mouseover", e => {
       e.target.style.backgroundColor = random();
+    });
+  });
+}
+
+function hover() {
+  let cellG = document.querySelectorAll(".grid-cell");
+  cellG.forEach(gridCells => {
+    gridCells.addEventListener("mouseover", e => {
+      e.target.style.backgroundColor = "#cbcdd1";
     });
   });
 }
